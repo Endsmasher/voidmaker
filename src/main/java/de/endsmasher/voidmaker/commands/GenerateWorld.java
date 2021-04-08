@@ -34,7 +34,7 @@ public class GenerateWorld extends BasicCommand {
 
     @Override
     public boolean execute(CommandSender sender, String alias, String[] args) {
-        if (!sender.hasPermission("voidmaker.generate"))
+        if (!sender.hasPermission("voidmaker.generate")) return false;
         if (!(sender instanceof Player)) {
             sender.sendMessage(VoidMaker.PREFIX + "You are not a player");
             return false;
